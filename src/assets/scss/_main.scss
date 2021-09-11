@@ -1,0 +1,19 @@
+@import './colors';
+
+.main{
+    display: flex;
+    height: 100vh;
+    background-color: $primary;
+}
+
+.contant-pages{
+    padding: 15px;
+    min-height: 100vh;
+
+    .title-pages{
+        p{
+            font-size: 25px;
+        }
+    }
+}
+
