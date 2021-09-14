@@ -30,8 +30,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '@/assets/scss/_main';
-
  .sidebar{
 
      .topMenu{
@@ -50,18 +48,18 @@ export default {
                  width: 50px;
                  height: 50px;
                  border-radius: 50%;
-                 background-color: $tertiary;
+                 background-color: rgb(224, 49, 201);
                  display: flex;
                  justify-content: center;
                  align-items: center;
                  font-size: 25px;
-                 color: $primary;
+                 color: rgb(88, 25, 85);
              }
          }
          .info{
              p{
                  margin: 0;
-                 color: $branco;
+                 color: rgb(244, 245, 247);
              }
              .name{
                  font-size: 14px;
@@ -84,7 +82,7 @@ export default {
              font-weight: 200;
 
              a{
-                 color: $branco;
+                 color: rgb(249, 250, 252);
                  text-decoration: none;
              }
          }
