@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <h3 class="logo"><i class="fa fa-star"></i>   Logo Marca</h3>
+        <h3 class="logo"><i class="fa fa-star"></i><img src="src/assets/img/Logo_YALO_med.png" /></h3>
         <a href="" @click.prevent="logout" class="logout">Sair <i class="fas fa-sign-out-alt"></i></a>
     </div>
 </template>
@@ -17,13 +17,14 @@ export default {
 </script>
 
 <style lang="scss">
+@import '@/assets/scss/_main';
     .navbar{
 
       .logo{
-          color: rgb(250, 251, 252);
+          color: $primary;
       }
       .logout{
-          color: rgb(249, 249, 250);
+          color: $primary;
           text-decoration: none;
       }
     }
