@@ -17,7 +17,7 @@
                     <tr v-for="user in data" :key="user.id">
                     <th scope="row">{{ user.id }}</th>
                     <td>{{ user.name }}</td>
-                    <td>{{ user.email }}</td>
+                    <td>{{ (description == 'Clientes') ? user.email : user.value }}</td>
                     </tr>
                 </tbody>
             </table>
@@ -37,11 +37,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/scss/_main';
     .listas{
         width: 100%;
         padding: 20px;
-        border: 1px solid #ccc;
+        border: 1px solid $primary;
         border-radius: 3px;
-        background-color: #fff;
+        background-color: $quartiary;
     }
 </style>

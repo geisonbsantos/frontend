@@ -26,10 +26,10 @@
             <div class="mt-5">
                 <div class="row">
                     <div class="col-12 col-md-6">
-                        <ListasComponent :data="users" description="Clientes" :columns="['IdUsu', 'Nome', 'E-mail']" />
+                        <ListasComponent :data="clients" description="Clientes" :columns="['IdCli', 'Nome', 'E-mail']" />
                     </div>
                     <div class="col-12 col-md-6">
-                        <ListasComponent :data="users" description="Produtos" :columns="['IdUsu', 'Nome', 'Valor']" />
+                        <ListasComponent :data="products" description="Produtos" :columns="['IdPro', 'Nome', 'Valor']" />
                     </div>
                 </div>
             </div>
@@ -48,7 +48,9 @@
         name: 'HomeComponent',
         data(){
             return{
-                users: []
+                //users: [],
+                clients: [],
+                products: [],
             }
         },
         mounted(){
@@ -56,16 +58,10 @@
         },
         methods:{
             async getUsers(){
-                let  resposta  = await axios.get ('https://jsonplaceholder.typicode.com/users'); 
-                if(resposta.status == 200){
-                    this.users = resposta.data; 
-                }else{
-                    console.error("Ocorreu um erro na API.");
-                }
-
-                resposta  = await axios.get ('http://localhost:8000/api/'); 
-                if(resposta.status == 200){
-                    console.log(response.data); 
+                let  response  = await axios.get ('/'); 
+                if(response.status == 200){
+                    this.clients = response.data.clients;
+                    this.products = response.data.products;  
                 }else{
                     console.error("Ocorreu um erro na API.");
                 }
