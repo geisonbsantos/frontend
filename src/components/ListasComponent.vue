@@ -14,10 +14,10 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="user in data" :key="user.id">
-                    <th scope="row">{{ user.id }}</th>
-                    <td>{{ user.name }}</td>
-                    <td>{{ (description == 'Clientes') ? user.email : user.value }}</td>
+                    <tr v-for="item in data" :key="item.id">
+                    <th scope="row">{{ item.id }}</th>
+                    <td>{{ item.name }}</td>
+                    <td>{{ (description == 'Clientes') ? item.email : item.value }}</td>
                     </tr>
                 </tbody>
             </table>

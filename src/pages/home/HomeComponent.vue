@@ -9,10 +9,10 @@
             <div>
                 <div class="row">
                     <div class="col-12 col-md-3">
-                        <CardsComponent :type="'Clientes'" :porcent="'7%'" :icon="'fa-users'" :qtd="'9.000'" />
+                        <CardsComponent :type="'Clientes'" :porcent="'7%'" :icon="'fa-users'" :qtd="clients.length" />
                     </div>
                     <div class="col-12 col-md-3">
-                        <CardsComponent :type="'Produtos'" :porcent="'15%'" :icon="'fa-store'" :qtd="'350'" />
+                        <CardsComponent :type="'Produtos'" :porcent="'15%'" :icon="'fa-store'" :qtd="products.length" />
                     </div>
                     <div class="col-12 col-md-3">
                         <CardsComponent :type="'Vendas'" :porcent="'86%'" :icon="'fa-box'" :qtd="'90.000'" />
